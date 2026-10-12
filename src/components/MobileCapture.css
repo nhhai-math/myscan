@@ -1,0 +1,143 @@
+.capture-app {
+  --capture-teal: #0c756b;
+  --capture-teal-dark: #07584f;
+  --capture-text: #202b29;
+  --capture-muted: #71807c;
+  min-height: 100dvh;
+  color: var(--capture-text);
+  background: #f6f8f5;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-tap-highlight-color: transparent;
+}
+.capture-app *, .capture-app *::before, .capture-app *::after { box-sizing: border-box; }
+.capture-app button, .capture-app input { font: inherit; }
+.capture-app button { cursor: pointer; }
+.capture-app button:disabled { cursor: default; opacity: .55; }
+.capture-app button:focus-visible, .capture-app a:focus-visible { outline: 3px solid #70b9ad; outline-offset: 4px; }
+.capture-app button, .capture-app a { touch-action: manipulation; }
+.capture-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: min(100%, 640px); min-height: 81px; margin: 0 auto; padding: 16px 24px; border-bottom: 1px solid #e5eae3; }
+.capture-brand { display: flex; align-items: center; gap: 8px; color: #203a33; text-decoration: none; font-size: 24px; font-weight: 750; letter-spacing: -1px; }
+.capture-brand > span:first-child { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--capture-teal); color: #fff; }
+.capture-brand .capture-brand-label { margin-left: 2px; font-size: 10px; font-weight: 650; letter-spacing: 0; color: #81908a; align-self: flex-end; padding-bottom: 4px; }
+.capture-connection { display: flex; align-items: center; gap: 5px; color: #85887a; font-size: 10px; white-space: nowrap; border-radius: 99px; padding: 5px 8px; background: #eeefe9; }
+.capture-connected { color: #277d55; background: #e8f2e8; }
+.capture-main { width: min(100%, 540px); margin: 0 auto; padding: 31px 24px 24px; }
+.capture-intro { padding-bottom: 23px; }
+.capture-eyebrow { color: var(--capture-teal); font-size: 9px; font-weight: 750; letter-spacing: 1.75px; margin: 0 0 11px; }
+.capture-intro h1 { white-space: pre-line; font-size: clamp(27px, 7vw, 34px); font-weight: 720; letter-spacing: -1.1px; line-height: 1.22; margin: 0 0 11px; }
+.capture-intro > p:last-child { color: var(--capture-muted); font-size: 12px; line-height: 1.75; max-width: 390px; margin: 0; }
+.capture-document-card { display: flex; align-items: center; gap: 12px; padding: 16px; border: 1px solid #e2e8de; border-radius: 14px; background: #fff; }
+.capture-document-icon { display: grid; place-items: center; flex: 0 0 42px; height: 48px; border: 1px solid #e6ece2; border-radius: 9px; color: #76947d; background: #f5f8f1; }
+.capture-document-info { display: flex; flex: 1; flex-direction: column; gap: 4px; min-width: 0; }
+.capture-document-info > span { color: #8a968e; font-size: 8px; letter-spacing: 1.1px; font-weight: 700; }
+.capture-document-info > strong { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; font-size: 13px; font-weight: 650; line-height: 1.4; }
+.capture-page-count { text-align: center; min-width: 35px; display: flex; flex-direction: column; border-left: 1px solid #edf0e9; padding-left: 14px; }
+.capture-page-count > strong { color: var(--capture-teal); font-size: 21px; font-weight: 680; line-height: 1.2; }
+.capture-page-count > span { color: #8c968e; font-size: 10px; }
+.capture-actions { margin-top: 21px; display: flex; flex-direction: column; gap: 11px; }
+.capture-camera-button { position: relative; display: flex; flex-direction: column; align-items: center; gap: 7px; min-height: 186px; width: 100%; border: 1px solid #0a6b60; border-radius: 16px; color: #fff; background: var(--capture-teal); padding: 22px 28px; box-shadow: 0 7px 15px #0c756b12; transition: background .16s; }
+.capture-camera-button:hover:not(:disabled) { background: var(--capture-teal-dark); }
+.capture-camera-icon { display: grid; place-items: center; height: 62px; width: 62px; border-radius: 18px; background: #ffffff17; border: 1px solid #ffffff20; margin-bottom: 2px; }
+.capture-camera-button > strong { font-size: 17px; font-weight: 650; letter-spacing: -.2px; }
+.capture-camera-button > span:not(.capture-camera-icon) { color: #baddd4; font-size: 11px; }
+.capture-camera-arrow { position: absolute; top: 24px; right: 21px; color: #b7dbd0; }
+.capture-button { display: flex; align-items: center; justify-content: center; gap: 9px; min-height: 49px; border-radius: 10px; padding: 12px 15px; border: 1px solid #dce5da; font-size: 12px; font-weight: 600; color: #465b4e; background: #fff; }
+.capture-button-primary { background: var(--capture-teal); border-color: var(--capture-teal); color: #fff; }
+.capture-button-primary:hover:not(:disabled) { background: var(--capture-teal-dark); }
+.capture-gallery-button { background: transparent; }
+.capture-gallery-button:hover:not(:disabled) { background: #eaf0e7; }
+.capture-native-button { display: flex; align-items: center; justify-content: center; gap: 7px; border: 0; background: transparent; font-size: 11px; color: #6f7f72; padding: 8px; min-height: 36px; }
+.capture-native-button:hover:not(:disabled) { color: var(--capture-teal); }
+.capture-hidden-input { display: none; }
+.capture-tips { position: relative; margin-top: 26px; padding: 17px 88px 17px 17px; min-height: 109px; border-radius: 13px; background: #edf1e8; overflow: hidden; }
+.capture-tip-label { font-weight: 750; font-size: 9px; letter-spacing: 1.2px; color: #647b5e; }
+.capture-tips p { color: #7c8873; font-size: 11px; line-height: 1.75; margin: 7px 0 0; }
+.capture-paper-illustration { position: absolute; right: 22px; top: 22px; display: grid; place-items: center; width: 52px; height: 68px; border-radius: 3px; border: 1px solid #b9c9ac; background: #fafcf7; transform: rotate(9deg); box-shadow: 4px 4px 0 #dce5d2; }
+.capture-paper-illustration > div { display: flex; flex-direction: column; gap: 6px; width: 28px; }
+.capture-paper-illustration span { height: 2px; border-radius: 2px; background: #c6d1bc; }
+.capture-paper-illustration span:first-child { height: 4px; width: 17px; background: #9aac8c; margin-bottom: 2px; }
+.capture-paper-illustration span:last-child { width: 19px; }
+.capture-workflow { display: flex; justify-content: center; align-items: center; gap: 10px; margin: 30px auto 18px; font-size: 9px; color: #a5aca0; }
+.capture-workflow > span { display: flex; align-items: center; gap: 5px; white-space: nowrap; }
+.capture-workflow i { height: 1px; background: #d5decf; width: 21px; }
+.capture-workflow .capture-workflow-done { color: #729969; }
+.capture-workflow .capture-workflow-active { color: var(--capture-teal); font-weight: 650; }
+.capture-footer { color: #9aa596; font-size: 9px; display: flex; align-items: center; justify-content: center; gap: 5px; margin: 0; }
+.capture-error { display: flex; align-items: flex-start; gap: 10px; margin-top: 18px; border: 1px solid #ecd5c9; background: #fcf2e9; color: #98603f; border-radius: 10px; padding: 12px 13px; font-size: 12px; line-height: 1.6; white-space: pre-line; }
+.capture-error > span { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.capture-error > button { border: 0; color: inherit; display: grid; place-items: center; background: none; padding: 4px; min-width: 30px; min-height: 30px; }
+.capture-success { display: flex; align-items: center; gap: 14px; margin-top: 18px; padding: 15px; border: 1px solid #d1e3d2; border-radius: 13px; background: #edf6eb; }
+.capture-success > img { width: 55px; height: 72px; object-fit: contain; background: #fff; border-radius: 4px; border: 1px solid #d6e3d1; }
+.capture-success strong { display: flex; align-items: center; gap: 6px; color: #387c4c; font-size: 13px; }
+.capture-success p { font-size: 11px; line-height: 1.7; color: #789271; margin: 5px 0 0; }
+.capture-preview-section { margin-top: 23px; }
+.capture-section-heading { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+.capture-section-heading h2 { font-size: 13px; margin: 0; font-weight: 650; }
+.capture-section-heading > span { display: flex; align-items: center; gap: 4px; font-size: 9px; color: #82907e; }
+.capture-preview-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.capture-preview-single { grid-template-columns: minmax(0, 1fr); }
+.capture-preview { position: relative; margin: 0; padding: 10px 10px 0; border: 1px solid #e0e6db; border-radius: 11px; background: #fff; overflow: hidden; }
+.capture-preview > img { display: block; width: 100%; aspect-ratio: 3 / 4; max-height: 350px; object-fit: contain; background: #eef1eb; border-radius: 6px; }
+.capture-preview-single .capture-preview > img { aspect-ratio: auto; height: 325px; }
+.capture-preview figcaption { display: flex; align-items: center; justify-content: space-between; padding: 11px 0; font-size: 10px; color: #83917b; }
+.capture-preview figcaption > span:first-child { font-weight: 650; color: #52634a; }
+.capture-remove { position: absolute; top: 15px; right: 15px; display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid #dee6db; border-radius: 50%; background: #fffffff2; color: #607256; box-shadow: 0 1px 6px #10290010; }
+.capture-preview-tip { font-size: 10px; margin: 11px 0 16px; color: #82907d; }
+.capture-send { width: 100%; min-height: 54px; font-size: 13px; }
+.capture-send > svg:last-child:not(:first-child) { margin-left: auto; }
+.capture-send > svg:first-child { margin-right: auto; }
+.capture-actions-compact { margin-top: 12px; }
+.capture-actions-compact .capture-camera-button { flex-direction: row; gap: 10px; min-height: 51px; border-radius: 10px; padding: 10px 14px; border: 1px solid #d3e2d7; background: #e7f0e8; color: var(--capture-teal); box-shadow: none; }
+.capture-actions-compact .capture-camera-button:hover:not(:disabled) { background: #dceadd; }
+.capture-actions-compact .capture-camera-icon { width: 27px; height: 27px; border: none; background: none; margin: 0; }
+.capture-actions-compact .capture-camera-icon svg { width: 21px; }
+.capture-actions-compact .capture-camera-button > strong { font-size: 12px; }
+.capture-actions-compact .capture-camera-arrow { position: static; margin-left: auto; color: var(--capture-teal); width: 17px; }
+.capture-working { display: flex; align-items: center; justify-content: center; gap: 7px; font-size: 12px; color: var(--capture-teal); margin: 8px 0; }
+.capture-state-card { text-align: center; margin: 70px auto 0; max-width: 390px; }
+.capture-state-icon { display: grid; place-items: center; width: 76px; height: 76px; margin: 0 auto 24px; border: 1px solid #cce0d8; border-radius: 22px; background: #eaf4eb; color: var(--capture-teal); }
+.capture-state-warning { color: #997348; background: #f5ecdf; border-color: #ecddc5; }
+.capture-state-card h1 { font-size: 24px; line-height: 1.3; letter-spacing: -.5px; font-weight: 680; margin: 0 0 14px; }
+.capture-state-card p { font-size: 13px; line-height: 1.8; color: #83917c; margin: 0 0 23px; }
+.capture-state-card .capture-button { width: 100%; }
+.capture-state-card .capture-kept-note { font-size: 12px; background: #ecf1e7; border-radius: 9px; padding: 10px; }
+.capture-live-camera { position: fixed; z-index: 1000; inset: 0; height: 100dvh; color: #fff; background: #121a16; overflow: hidden; }
+.capture-video { display: block; width: 100%; height: 100%; object-fit: contain; }
+.capture-camera-top { position: absolute; top: 0; left: 0; right: 0; display: flex; align-items: center; gap: 12px; min-height: 85px; padding: max(16px, env(safe-area-inset-top)) 20px 16px; background: linear-gradient(#07110ddd, #07110d00); }
+.capture-camera-top > button { display: grid; place-items: center; color: #fff; border: 1px solid #ffffff33; border-radius: 12px; background: #182e2350; width: 43px; height: 43px; }
+.capture-camera-top > strong { font-weight: 600; font-size: 15px; }
+.capture-camera-top > span { margin-left: auto; color: #afc9bb; font-weight: 650; font-size: 8px; letter-spacing: 1px; }
+.capture-camera-guide { position: absolute; width: min(75vw, 400px); height: min(50dvh, 530px); left: 50%; top: 43%; transform: translate(-50%, -50%); pointer-events: none; border: 1px solid #ffffff22; border-radius: 8px; }
+.capture-camera-guide > span { position: absolute; height: 26px; width: 26px; border-color: #d5f7e1; border-style: solid; }
+.capture-camera-guide > span:nth-child(1) { left: -2px; top: -2px; border-width: 3px 0 0 3px; border-top-left-radius: 8px; }
+.capture-camera-guide > span:nth-child(2) { right: -2px; top: -2px; border-width: 3px 3px 0 0; border-top-right-radius: 8px; }
+.capture-camera-guide > span:nth-child(3) { right: -2px; bottom: -2px; border-width: 0 3px 3px 0; border-bottom-right-radius: 8px; }
+.capture-camera-guide > span:nth-child(4) { left: -2px; bottom: -2px; border-width: 0 0 3px 3px; border-bottom-left-radius: 8px; }
+.capture-camera-bottom { position: absolute; bottom: 0; left: 0; right: 0; display: flex; flex-direction: column; align-items: center; gap: 15px; padding: 35px 20px max(22px, env(safe-area-inset-bottom)); background: linear-gradient(#07110d00, #07110de6 35%); }
+.capture-camera-bottom > p { color: #d0dfd5; text-align: center; font-size: 12px; margin: 0; }
+.capture-shutter { display: grid; place-items: center; border: 3px solid #e8f8ef; width: 76px; height: 76px; border-radius: 50%; background: transparent; color: #fff; padding: 6px; }
+.capture-shutter > span { width: 100%; height: 100%; border-radius: 50%; background: #e8f8ef; }
+.capture-camera-bottom > span { font-size: 10px; color: #8da497; }
+.capture-spin { animation: capture-spin 1s linear infinite; }
+@keyframes capture-spin { to { transform: rotate(360deg); } }
+@media (max-width: 359px) {
+  .capture-header { padding: 14px 17px; }
+  .capture-brand { font-size: 22px; }
+  .capture-brand .capture-brand-label { display: none; }
+  .capture-main { padding-left: 17px; padding-right: 17px; }
+  .capture-workflow { gap: 6px; font-size: 8px; }
+  .capture-workflow i { width: 12px; }
+  .capture-section-heading > span { font-size: 8px; }
+}
+@media (min-width: 600px) {
+  .capture-header { min-height: 95px; }
+  .capture-main { padding-top: 42px; }
+  .capture-brand .capture-brand-label { font-size: 11px; }
+  .capture-connection { font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .capture-spin { animation-duration: 3s; }
+  .capture-camera-button { transition: none; }
+}

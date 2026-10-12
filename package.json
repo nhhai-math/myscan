@@ -1,0 +1,38 @@
+{
+  "name": "myscan",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Quét tài liệu từ điện thoại, chỉnh sửa ảnh và ghép PDF.",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "node server/index.js",
+    "build": "tsc --noEmit && vite build",
+    "start": "node server/index.js --production",
+    "test": "tsx --test test/*.test.*",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "express": "5.3.0",
+    "lucide-react": "1.55.0",
+    "multer": "2.4.0",
+    "pdf-lib": "1.17.1",
+    "qrcode": "1.5.4",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "sharp": "0.35.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.0",
+    "@types/node": "26.6.5",
+    "@types/qrcode": "1.5.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vite": "8.3.4"
+  }
+}

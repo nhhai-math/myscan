@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0-debug",
+  "minimum_android": "8.0 (API26)",
+  "runtime_permissions": [
+    "CAMERA"
+  ],
+  "jvm_tests_passed": 23,
+  "android15_tests_passed": 10,
+  "apk_sha256": "b73891195767d9a13518770d2105a65d870ffe671ebb65814562698634d6e243",
+  "apk_bytes": 4704805
+}
