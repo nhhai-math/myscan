@@ -1,5 +1,25 @@
 # myscan
 
+## Bản iPhone
+
+Bản **iPhone PWA, iOS 16.4 trở lên** nằm trong `src/ios/`: chụp/chọn ảnh, chỉnh bốn góc, xoay, chỉnh màu, sắp xếp và xuất PDF trên điện thoại. Cài bằng **Safari → Chia sẻ → Thêm vào Màn hình chính**, không cần máy Mac hay tài khoản Apple Developer. Chờ **Sẵn sàng offline** ở lần mở đầu tiên có mạng để dùng khi mất Internet. Thư viện lưu riêng trên thiết bị.
+
+**[Mở myscan cho iPhone](https://nhhai-math.github.io/myscan/ios/)** · [Hướng dẫn cài và bật GitHub Pages](docs/ios-install.md)
+
+[![QR cài myscan trên iPhone](docs/myscan-ios-install-qr.png)](https://nhhai-math.github.io/myscan/ios/)
+
+Địa chỉ cài và QR hoạt động khi GitHub Pages đã triển khai từ nhánh **main**, thư mục **/docs**. Mã ứng dụng đã build nằm trong `docs/ios/`. Đây là ứng dụng cài qua Safari; chưa có bản IPA native hoặc bản App Store.
+
+```bash
+npm ci
+npm run build:ios
+npm run test:ios
+```
+
+Lệnh build cập nhật `dist-ios/` và trang triển khai `docs/ios/`. Dùng `npm run build:ios -- --local-only` khi chỉ kiểm tra build và muốn giữ nguyên các tệp trang đã lưu trong Git.
+
+## Bản Android
+
 Bản **Android native, offline** nằm trong `android/`: chụp, chỉnh ảnh, sắp xếp và xuất PDF hoàn toàn trên điện thoại, từ Android **8.0 trở lên**.
 
 **[Tải APK Android 1.0.0 thử nghiệm](https://github.com/nhhai-math/myscan/raw/refs/heads/main/downloads/myscan-android-1.0.0-debug.apk)** · [Hướng dẫn cài qua QR](docs/android-download.md) · [Mã nguồn và cách build](android/README.md)

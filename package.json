@@ -10,6 +10,8 @@
   "scripts": {
     "dev": "node server/index.js",
     "build": "tsc --noEmit && vite build",
+    "build:ios": "tsc --noEmit && node scripts/build-ios-pwa.mjs",
+    "test:ios": "playwright test --config=playwright.ios.config.ts",
     "start": "node server/index.js --production",
     "test": "tsx --test test/*.test.*",
     "test:e2e": "playwright test"
